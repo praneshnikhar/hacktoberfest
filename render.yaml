@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: habla-conmigo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: OLLAMA_URL
+        sync: false
+      - key: TARGET_LANGUAGE
+        value: Spanish
+      - key: TARGET_LANGUAGE_CODE
+        value: spa
+      - key: OLLAMA_MODEL
+        value: gemma3:4b
